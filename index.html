@@ -1,6 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Engineering Internship Tracker</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:hidden}
 :root {
   --bg:#f7f7f5;--surface:#fff;--fg:#1a1a1a;--fg-dim:#6b6b6b;--border:#e2e0dc;
   --accent:#2563eb;--link:#2563eb;--hover-row:#fafaf8;--badge-bg:#f0f0ee;
@@ -173,10 +180,15 @@ tbody tr.data-row{cursor:pointer}
 .fd:hover{border-color:var(--accent);color:var(--fg)}
 .fd.active{background:var(--accent);border-color:var(--accent);color:#fff}
 @media(max-width:680px){
+html,body{overflow-x:hidden;width:100%}
+header{flex-wrap:wrap;gap:.5rem}
 h1{font-size:1.25rem}
+header p{font-size:.75rem}
 .hdr-actions{gap:.35rem}
 .li-btn{font-size:.62rem;padding:.25rem .45rem;gap:.2rem}
 .li-btn svg{width:12px;height:12px}
+.filters{gap:.3rem}
+.fb{font-size:.62rem;padding:.22rem .4rem}
 .pipeline{flex-wrap:wrap}
 .pipe-stage{min-width:28%;flex:1 1 28%;border-bottom:1px solid var(--border);padding:.5rem .3rem}
 .pipe-stage .pipe-arrow{display:none}
@@ -266,6 +278,8 @@ tbody tr.data-row:has(+ .note-row.open){
 .co-av{width:20px;height:20px;font-size:.48rem;margin-right:.3rem;border-radius:4px}
 }
 </style>
+</head>
+<body>
 
 <header>
 <div>
@@ -2163,3 +2177,5 @@ toggleBtn.addEventListener('click',()=>{
   applyTheme(isDark?'light':'dark');
 });
 </script>
+</body>
+</html>
